@@ -4,22 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- DNS prefetch and preconnect for faster resource loading -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Preload critical images with better sizing -->
     <link rel="preload" as="image" href="/src/assets/aboutme_journal-400w.webp" type="image/webp" fetchpriority="high" media="(max-width: 768px)">
     <link rel="preload" as="image" href="/src/assets/aboutme_journal-800w.webp" type="image/webp" fetchpriority="high" media="(min-width: 769px)">
+
     <!-- Preload first few stickers for above-the-fold content -->
     <link rel="preload" as="image" href="/src/assets/sticker_1.webp" type="image/webp">
     <link rel="preload" as="image" href="/src/assets/sticker_2.webp" type="image/webp">
     <link rel="preload" as="image" href="/src/assets/sticker_3.webp" type="image/webp">
     <link rel="preload" as="image" href="/src/assets/sticker_4.webp" type="image/webp">
+
     <!-- Font preloading to reduce network dependency chain -->
     <link rel="preload" as="font" href="/src/assets/punkbabe/PUNKBABE TRIAL.ttf" type="font/ttf" crossorigin>
     <link rel="preload" as="font" href="/src/assets/dk_crayonista/DK Crayonista.ttf" type="font/ttf" crossorigin>
-    <title>Your Name</title>
+    <title>Gunjariya Prince</title>
     <style>
+
       /* Critical CSS for initial render - Above the fold styles */
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { 
@@ -28,6 +33,7 @@
         color: #8B5A65;
         line-height: 1.6;
       }
+
       /* Navigation critical styles */
       .navigation {
         position: fixed;
@@ -39,15 +45,24 @@
         backdrop-filter: blur(20px);
         padding: 1rem 0;
       }
+
       .main-content { padding-top: 80px; }
+
       /* About section critical styles */
       .about-section {
         min-height: 100vh;
         background: linear-gradient(180deg, rgb(255 232 239) 0%, rgb(254 245 245) 100%);
         padding: 2rem 0;
       }
-      .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+      .container { 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 0 1.5rem; 
+      }
+
       .text-center { text-align: center; }
+
       /* Loading states for lazy components */
       .loading-fallback {
         display: flex;
@@ -56,6 +71,7 @@
         background: #f8f9fa;
         color: #6c757d;
       }
+
       /* Performance optimizations */
       .will-change-transform { will-change: transform; }
       .will-change-opacity { will-change: opacity; }
@@ -65,6 +81,7 @@
         content-visibility: auto;
         contain-intrinsic-size: 0 200px;
       }
+
       /* Optimize animations - removed global transform-style that breaks fixed positioning */
       /* Font faces with swap for better performance */
       @font-face {
@@ -77,8 +94,11 @@
         src: url('/src/assets/dk_crayonista/DK Crayonista.ttf') format('truetype');
         font-display: swap;
       }
+
     </style>
+
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
