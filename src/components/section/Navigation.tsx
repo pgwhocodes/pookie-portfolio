@@ -115,7 +115,7 @@ const Navigation = () => {
           }}
           onClick={() => window.location.href = '/'}
           aria-label="Gunjariya Prince - Go to homepage">
-          Gunjariya Prince
+          Prince Gunjariya
         </button>
         
         {/* Desktop Navigation */}
